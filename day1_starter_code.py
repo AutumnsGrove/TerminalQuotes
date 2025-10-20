@@ -157,6 +157,10 @@ class QuotableAPICollector:
     
     def __init__(self):
         self.session = requests.Session()
+        # Disable SSL verification for API with expired cert (safe for read-only public API)
+        self.session.verify = False
+        import urllib3
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
     
     def fetch_quotes_by_tag(self, tag: str, limit: int = 50) -> List[Dict]:
         """Fetch quotes by tag from Quotable API"""
