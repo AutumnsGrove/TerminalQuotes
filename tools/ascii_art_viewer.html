@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Viewer & Curator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .summary {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 15px 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat.total .stat-value { color: #667eea; }
+        .stat.good .stat-value { color: #28a745; }
+        .stat.bad .stat-value { color: #dc3545; }
+        .stat.unmarked .stat-value { color: #6c757d; }
+
+        .controls {
+            padding: 20px 30px;
+            background: white;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-filter {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .btn-filter.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-export {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-export:hover {
+            background: #218838;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            font-size: 1.5em;
+            color: #667eea;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 6px;
+            border: 1px solid #f5c6cb;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .theme-section {
+            margin-bottom: 40px;
+        }
+
+        .theme-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .theme-header:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .theme-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        .theme-count {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .theme-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+            padding-left: 10px;
+        }
+
+        .theme-content.collapsed {
+            display: none;
+        }
+
+        .art-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .art-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+        }
+
+        .art-card.marked-good {
+            border-color: #28a745;
+            background: #f0fff4;
+        }
+
+        .art-card.marked-bad {
+            border-color: #dc3545;
+            background: #fff5f5;
+        }
+
+        .art-header {
+            margin-bottom: 15px;
+        }
+
+        .art-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .art-description {
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .art-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85em;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .art-preview {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .art-preview pre {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            line-height: 1.2;
+            white-space: pre;
+        }
+
+        .art-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+        }
+
+        .art-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-good {
+            background: #28a745;
+            color: white;
+            flex: 1;
+        }
+
+        .btn-good:hover {
+            background: #218838;
+        }
+
+        .btn-bad {
+            background: #dc3545;
+            color: white;
+            flex: 1;
+        }
+
+        .btn-bad:hover {
+            background: #c82333;
+        }
+
+        .btn-clear {
+            background: #6c757d;
+            color: white;
+            flex: 0.5;
+        }
+
+        .btn-clear:hover {
+            background: #5a6268;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .theme-content {
+                grid-template-columns: 1fr;
+            }
+
+            .summary {
+                gap: 15px;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ASCII Art Viewer & Curator</h1>
+            <p class="subtitle">View, organize, and curate ASCII art collection</p>
+        </header>
+
+        <div class="summary" id="summary">
+            <div class="stat total">
+                <div class="stat-value" id="stat-total">0</div>
+                <div class="stat-label">Total Pieces</div>
+            </div>
+            <div class="stat good">
+                <div class="stat-value" id="stat-good">0</div>
+                <div class="stat-label">Marked Good</div>
+            </div>
+            <div class="stat bad">
+                <div class="stat-value" id="stat-bad">0</div>
+                <div class="stat-label">Marked Bad</div>
+            </div>
+            <div class="stat unmarked">
+                <div class="stat-value" id="stat-unmarked">0</div>
+                <div class="stat-label">Unmarked</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="filter-buttons">
+                <button class="btn-filter active" data-filter="all">Show All</button>
+                <button class="btn-filter" data-filter="good">Good Only</button>
+                <button class="btn-filter" data-filter="bad">Bad Only</button>
+                <button class="btn-filter" data-filter="unmarked">Unmarked Only</button>
+            </div>
+            <button class="btn-export" onclick="exportCurations()">Export Curated List (JSON)</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading ASCII art collection...</p>
+        </div>
+
+        <div class="error hidden" id="error"></div>
+
+        <div class="content hidden" id="content"></div>
+    </div>
+
+    <script>
+        // Storage key for localStorage
+        const STORAGE_KEY = 'ascii_art_curations';
+
+        // Global state
+        let metadata = null;
+        let curations = {};
+        let currentFilter = 'all';
+
+        // Load curations from localStorage
+        function loadCurations() {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored) {
+                try {
+                    curations = JSON.parse(stored);
+                } catch (e) {
+                    console.error('Error loading curations:', e);
+                    curations = {};
+                }
+            }
+        }
+
+        // Save curations to localStorage
+        function saveCurations() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(curations));
+            updateStats();
+        }
+
+        // Get curation status for an art piece
+        function getCuration(file) {
+            return curations[file] || null;
+        }
+
+        // Set curation status
+        function setCuration(file, status) {
+            if (status === null) {
+                delete curations[file];
+            } else {
+                curations[file] = status;
+            }
+            saveCurations();
+        }
+
+        // Update statistics
+        function updateStats() {
+            if (!metadata) return;
+
+            let total = 0;
+            let good = 0;
+            let bad = 0;
+
+            // Count all pieces
+            for (const theme in metadata) {
+                if (Array.isArray(metadata[theme])) {
+                    metadata[theme].forEach(art => {
+                        art.variants.forEach(variant => {
+                            total++;
+                            const status = getCuration(variant.file);
+                            if (status === 'good') good++;
+                            else if (status === 'bad') bad++;
+                        });
+                    });
+                }
+            }
+
+            const unmarked = total - good - bad;
+
+            document.getElementById('stat-total').textContent = total;
+            document.getElementById('stat-good').textContent = good;
+            document.getElementById('stat-bad').textContent = bad;
+            document.getElementById('stat-unmarked').textContent = unmarked;
+        }
+
+        // Load ASCII art file content
+        async function loadArtFile(file) {
+            const path = `../data/ascii_art/${file}`;
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return await response.text();
+            } catch (e) {
+                console.error(`Error loading ${file}:`, e);
+                return `Error loading file: ${e.message}`;
+            }
+        }
+
+        // Create an art card element
+        async function createArtCard(art, variant, theme) {
+            const card = document.createElement('div');
+            card.className = 'art-card';
+            card.dataset.file = variant.file;
+            card.dataset.theme = theme;
+
+            const status = getCuration(variant.file);
+            if (status === 'good') card.classList.add('marked-good');
+            else if (status === 'bad') card.classList.add('marked-bad');
+
+            // Load the ASCII art content
+            const content = await loadArtFile(variant.file);
+
+            card.innerHTML = `
+                <div class="art-header">
+                    <div class="art-name">${art.name}</div>
+                    <div class="art-description">${art.description}</div>
+                    <div class="art-meta">
+                        <span>📁 ${variant.file}</span>
+                        <span>📏 ${variant.width} × ${variant.height}</span>
+                    </div>
+                </div>
+                <div class="art-preview">
+                    <pre>${content}</pre>
+                </div>
+                <div class="art-tags">
+                    ${art.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                <div class="art-actions">
+                    <button class="btn-good" onclick="markArt('${variant.file}', 'good')">✓ Good</button>
+                    <button class="btn-bad" onclick="markArt('${variant.file}', 'bad')">✗ Bad</button>
+                    <button class="btn-clear" onclick="markArt('${variant.file}', null)">Clear</button>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Mark an art piece
+        window.markArt = function(file, status) {
+            setCuration(file, status);
+            const card = document.querySelector(`[data-file="${file}"]`);
+            if (card) {
+                card.classList.remove('marked-good', 'marked-bad');
+                if (status === 'good') card.classList.add('marked-good');
+                else if (status === 'bad') card.classList.add('marked-bad');
+            }
+            applyFilter(currentFilter);
+        };
+
+        // Apply filter to cards
+        function applyFilter(filter) {
+            currentFilter = filter;
+            const cards = document.querySelectorAll('.art-card');
+
+            cards.forEach(card => {
+                const status = getCuration(card.dataset.file);
+                let show = false;
+
+                switch (filter) {
+                    case 'all':
+                        show = true;
+                        break;
+                    case 'good':
+                        show = status === 'good';
+                        break;
+                    case 'bad':
+                        show = status === 'bad';
+                        break;
+                    case 'unmarked':
+                        show = status === null;
+                        break;
+                }
+
+                card.classList.toggle('hidden', !show);
+            });
+
+            // Update active button
+            document.querySelectorAll('.btn-filter').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.filter === filter);
+            });
+
+            // Hide empty theme sections
+            document.querySelectorAll('.theme-section').forEach(section => {
+                const visibleCards = section.querySelectorAll('.art-card:not(.hidden)');
+                section.classList.toggle('hidden', visibleCards.length === 0);
+            });
+        }
+
+        // Export curations
+        window.exportCurations = function() {
+            const exportData = {
+                timestamp: new Date().toISOString(),
+                total: Object.keys(curations).length,
+                curations: curations,
+                summary: {
+                    good: Object.values(curations).filter(s => s === 'good').length,
+                    bad: Object.values(curations).filter(s => s === 'bad').length
+                }
+            };
+
+            const blob = new Blob([JSON.stringify(exportData, null, 2)], {
+                type: 'application/json'
+            });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `ascii_art_curations_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        };
+
+        // Toggle theme section
+        window.toggleTheme = function(theme) {
+            const content = document.getElementById(`theme-${theme}-content`);
+            content.classList.toggle('collapsed');
+        };
+
+        // Load and display metadata
+        async function loadMetadata() {
+            try {
+                const response = await fetch('../data/ascii_art/metadata.yaml');
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const yamlText = await response.text();
+
+                // Parse YAML manually (simple parser for this structure)
+                metadata = parseYAML(yamlText);
+
+                await renderContent();
+
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('content').classList.remove('hidden');
+
+                updateStats();
+            } catch (e) {
+                console.error('Error loading metadata:', e);
+                document.getElementById('loading').classList.add('hidden');
+                const errorEl = document.getElementById('error');
+                errorEl.textContent = `Error loading metadata: ${e.message}. Make sure to open this file from a web server (not file://).`;
+                errorEl.classList.remove('hidden');
+            }
+        }
+
+        // Simple YAML parser for our specific format
+        function parseYAML(text) {
+            const lines = text.split('\n');
+            const result = {};
+            let currentTheme = null;
+            let currentArt = null;
+            let currentVariant = null;
+            let inTags = false;
+
+            for (let line of lines) {
+                // Skip comments and empty lines
+                if (line.trim().startsWith('#') || line.trim() === '') continue;
+
+                // Theme (no indent)
+                if (line.match(/^[a-z]+:$/)) {
+                    currentTheme = line.replace(':', '').trim();
+                    result[currentTheme] = [];
+                    currentArt = null;
+                    continue;
+                }
+
+                // Art piece (2 spaces)
+                if (line.match(/^  - name:/)) {
+                    currentArt = {
+                        name: line.split('"')[1],
+                        description: '',
+                        variants: [],
+                        tags: []
+                    };
+                    result[currentTheme].push(currentArt);
+                    inTags = false;
+                    continue;
+                }
+
+                if (!currentArt) continue;
+
+                // Description (4 spaces)
+                if (line.match(/^    description:/)) {
+                    currentArt.description = line.split('"')[1];
+                    continue;
+                }
+
+                // Variants (4 spaces)
+                if (line.match(/^    variants:$/)) {
+                    continue;
+                }
+
+                // Variant (6 spaces)
+                if (line.match(/^      - width:/)) {
+                    currentVariant = {
+                        width: parseInt(line.split(':')[1].trim())
+                    };
+                    currentArt.variants.push(currentVariant);
+                    continue;
+                }
+
+                // Variant properties (8 spaces)
+                if (currentVariant) {
+                    if (line.match(/^        file:/)) {
+                        currentVariant.file = line.split('"')[1];
+                        continue;
+                    }
+                    if (line.match(/^        height:/)) {
+                        currentVariant.height = parseInt(line.split(':')[1].trim());
+                        continue;
+                    }
+                }
+
+                // Tags (4 spaces)
+                if (line.match(/^    tags:/)) {
+                    inTags = true;
+                    const tagsMatch = line.match(/\[(.*)\]/);
+                    if (tagsMatch) {
+                        currentArt.tags = tagsMatch[1].split(',')
+                            .map(t => t.trim().replace(/"/g, ''));
+                    }
+                    continue;
+                }
+            }
+
+            return result;
+        }
+
+        // Render all content
+        async function renderContent() {
+            const contentEl = document.getElementById('content');
+            contentEl.innerHTML = '';
+
+            for (const theme in metadata) {
+                const section = document.createElement('div');
+                section.className = 'theme-section';
+                section.dataset.theme = theme;
+
+                const header = document.createElement('div');
+                header.className = 'theme-header';
+                header.onclick = () => toggleTheme(theme);
+                header.innerHTML = `
+                    <div class="theme-title">${theme}</div>
+                    <div class="theme-count">${metadata[theme].reduce((sum, art) => sum + art.variants.length, 0)} pieces</div>
+                `;
+
+                const themeContent = document.createElement('div');
+                themeContent.className = 'theme-content';
+                themeContent.id = `theme-${theme}-content`;
+
+                section.appendChild(header);
+                section.appendChild(themeContent);
+                contentEl.appendChild(section);
+
+                // Load all art pieces for this theme
+                for (const art of metadata[theme]) {
+                    for (const variant of art.variants) {
+                        const card = await createArtCard(art, variant, theme);
+                        themeContent.appendChild(card);
+                    }
+                }
+            }
+        }
+
+        // Setup filter buttons
+        document.querySelectorAll('.btn-filter').forEach(btn => {
+            btn.addEventListener('click', () => {
+                applyFilter(btn.dataset.filter);
+            });
+        });
+
+        // Initialize
+        loadCurations();
+        loadMetadata();
+    </script>
+</body>
+</html>
