@@ -1,1153 +1,1276 @@
 # ASCII Art Metadata Catalog
 # Complete catalog of all ASCII art pieces in the collection
 # Each entry includes accurate dimensions, file paths, and semantic tags
-# Total pieces: 143 across 10 themes
+# Total pieces: 105 across 10 themes
+# Filtered on 2025-10-26 - removed 38 low-quality pieces
 
 meditation:
-  - name: "Buddha Blessing"
-    description: "Simple Buddha figure with hands in blessing mudra"
-    variants:
-      - width: 13
-        file: "meditation/buddha_blessing_simple_12.txt"
-        height: 5
-    tags: ["meditation", "peace", "mindfulness", "zen", "spiritual"]
-
-  - name: "Buddha Simple"
-    description: "Minimalist seated Buddha figure"
-    variants:
-      - width: 12
-        file: "meditation/buddha_simple_small_10.txt"
-        height: 7
-      - width: 17
-        file: "meditation/buddha_simple_small_15.txt"
-        height: 8
-    tags: ["meditation", "peace", "mindfulness", "zen", "small"]
-
-  - name: "Buddha Standing"
-    description: "Standing Buddha figure in meditation pose"
-    variants:
-      - width: 12
-        file: "meditation/buddha_standing_medium_20.txt"
-        height: 15
-    tags: ["meditation", "standing", "mindfulness", "zen", "contemplation"]
-
-  - name: "Buddha Seated Large"
-    description: "Detailed large seated Buddha in lotus position"
-    variants:
-      - width: 68
-        file: "meditation/buddha_seated_large_60.txt"
-        height: 21
-    tags: ["meditation", "peace", "large", "detailed", "zen"]
-
-  - name: "Lotus Simple"
-    description: "Simple lotus flower blooming"
-    variants:
-      - width: 11
-        file: "meditation/lotus_simple_10.txt"
-        height: 9
-    tags: ["meditation", "lotus", "flower", "enlightenment", "purity"]
-
-  - name: "Lotus Detailed"
-    description: "Detailed lotus flower with petals"
-    variants:
-      - width: 13
-        file: "meditation/lotus_detailed_15.txt"
-        height: 10
-    tags: ["meditation", "lotus", "flower", "enlightenment", "detailed"]
-
-  - name: "Lotus on Water"
-    description: "Lotus flower floating on water surface"
-    variants:
-      - width: 13
-        file: "meditation/lotus_water_15.txt"
-        height: 9
-    tags: ["meditation", "lotus", "water", "tranquility", "reflection"]
-
-  - name: "Yin Yang Simple"
-    description: "Classic yin-yang symbol representing balance"
-    variants:
-      - width: 19
-        file: "meditation/yinyang_simple_15.txt"
-        height: 10
-    tags: ["meditation", "balance", "harmony", "duality", "tao"]
-
-  - name: "Yin Yang Balanced"
-    description: "Balanced yin-yang with clear definition"
-    variants:
-      - width: 20
-        file: "meditation/yinyang_balanced_18.txt"
-        height: 9
-    tags: ["meditation", "balance", "harmony", "duality", "tao"]
-
-  - name: "Yin Yang Detailed"
-    description: "Detailed yin-yang with ornate styling"
-    variants:
-      - width: 25
-        file: "meditation/yinyang_detailed_20.txt"
-        height: 11
-    tags: ["meditation", "balance", "harmony", "detailed", "tao"]
-
-adversity:
-  - name: "Lightning Bolt"
-    description: "Single powerful lightning bolt striking downward"
-    variants:
-      - width: 25
-        file: "adversity/lightning_bolt_20.txt"
-        height: 13
-    tags: ["adversity", "storm", "power", "challenge", "force"]
-
-  - name: "Lightning Simple"
-    description: "Simple forked lightning pattern"
-    variants:
-      - width: 15
-        file: "adversity/lightning_simple_15.txt"
-        height: 8
-    tags: ["adversity", "storm", "challenge", "simple", "small"]
-
-  - name: "Lightning Forked"
-    description: "Forked lightning with multiple branches"
-    variants:
-      - width: 15
-        file: "adversity/lightning_forked_15.txt"
-        height: 8
-    tags: ["adversity", "storm", "branching", "challenge", "power"]
-
-  - name: "Lightning and Cloud"
-    description: "Lightning emerging from storm cloud"
-    variants:
-      - width: 22
-        file: "adversity/lightning_cloud_25.txt"
-        height: 14
-    tags: ["adversity", "storm", "cloud", "weather", "challenge"]
-
-  - name: "Rain Cloud"
-    description: "Dark cloud with rainfall"
-    variants:
-      - width: 14
-        file: "adversity/rain_cloud_15.txt"
-        height: 8
-    tags: ["adversity", "rain", "weather", "storm", "challenge"]
-
-  - name: "Heavy Rain"
-    description: "Heavy rainfall pattern with dense drops"
-    variants:
-      - width: 15
-        file: "adversity/rain_heavy_18.txt"
-        height: 11
-    tags: ["adversity", "rain", "storm", "weather", "intensity"]
-
-  - name: "Tornado Funnel"
-    description: "Twisting tornado funnel cloud"
-    variants:
-      - width: 18
-        file: "adversity/tornado_funnel_20.txt"
-        height: 14
-    tags: ["adversity", "storm", "tornado", "power", "chaos"]
-
-  - name: "Tornado with Debris"
-    description: "Tornado with debris field"
-    variants:
-      - width: 18
-        file: "adversity/tornado_debris_20.txt"
-        height: 13
-    tags: ["adversity", "storm", "tornado", "destruction", "chaos"]
-
-  - name: "Breaking Wave"
-    description: "Ocean wave cresting and breaking"
-    variants:
-      - width: 22
-        file: "adversity/wave_breaking_20.txt"
-        height: 7
-    tags: ["adversity", "ocean", "wave", "power", "persistence"]
-
-  - name: "Wave Crash"
-    description: "Powerful wave crashing with force"
-    variants:
-      - width: 31
-        file: "adversity/wave_crash_25.txt"
-        height: 4
-    tags: ["adversity", "ocean", "wave", "power", "impact"]
-
-  - name: "Calm Waves"
-    description: "Gentle rolling ocean waves"
-    variants:
-      - width: 22
-        file: "adversity/waves_calm_25.txt"
-        height: 3
-    tags: ["adversity", "ocean", "wave", "calm", "rhythm"]
-
-  - name: "Mountain Peak"
-    description: "Rocky mountain peak reaching skyward"
-    variants:
-      - width: 21
-        file: "adversity/mountain_peak_20.txt"
-        height: 9
-    tags: ["adversity", "mountain", "climbing", "summit", "challenge"]
-
-  - name: "Mountain Climber"
-    description: "Figure climbing steep mountain face"
-    variants:
-      - width: 25
-        file: "adversity/mountain_climber_25.txt"
-        height: 8
-    tags: ["adversity", "mountain", "climbing", "perseverance", "challenge"]
-
-  - name: "Climber with Stick"
-    description: "Climber with walking stick ascending"
-    variants:
-      - width: 16
-        file: "adversity/climber_stick_15.txt"
-        height: 9
-    tags: ["adversity", "climbing", "perseverance", "journey", "endurance"]
-
-  - name: "Blacksmith Anvil"
-    description: "Anvil with hammer for forging"
-    variants:
-      - width: 18
-        file: "adversity/anvil_blacksmith_20.txt"
-        height: 11
-    tags: ["adversity", "forge", "craft", "strength", "resilience"]
-
-  - name: "Forge Anvil"
-    description: "Anvil in the forge with flames"
-    variants:
-      - width: 18
-        file: "adversity/anvil_forge_20.txt"
-        height: 10
-    tags: ["adversity", "forge", "fire", "craft", "transformation"]
-
-  - name: "Stone Tower"
-    description: "Tall stone tower standing firm"
-    variants:
-      - width: 13
-        file: "adversity/tower_stone_15.txt"
-        height: 10
-    tags: ["adversity", "tower", "fortress", "strength", "endurance"]
-
-  - name: "Fortress Tower"
-    description: "Defensive fortress tower structure"
-    variants:
-      - width: 16
-        file: "adversity/fortress_tower_15.txt"
-        height: 9
-    tags: ["adversity", "fortress", "defense", "strength", "resilience"]
-
+- name: Buddha Seated Large
+  description: Detailed large seated Buddha in lotus position
+  variants:
+  - width: 68
+    file: meditation/buddha_seated_large_60.txt
+    height: 21
+  tags:
+  - meditation
+  - peace
+  - large
+  - detailed
+  - zen
+adversity: []
 exploration:
-  - name: "Sailing Ship Large"
-    description: "Large sailing vessel with full rigging"
-    variants:
-      - width: 62
-        file: "exploration/ship_large_sailing_60.txt"
-        height: 9
-    tags: ["exploration", "ship", "sailing", "voyage", "adventure"]
-
-  - name: "Viking Ship"
-    description: "Viking longship with dragon prow"
-    variants:
-      - width: 33
-        file: "exploration/ship_viking_47.txt"
-        height: 5
-    tags: ["exploration", "ship", "viking", "voyage", "adventure"]
-
-  - name: "Ship on Waves"
-    description: "Ship sailing across ocean waves"
-    variants:
-      - width: 46
-        file: "exploration/ship_waves_45.txt"
-        height: 8
-    tags: ["exploration", "ship", "ocean", "voyage", "journey"]
-
-  - name: "Steamship Liner"
-    description: "Steam-powered ocean liner"
-    variants:
-      - width: 21
-        file: "exploration/steamship_liner_25.txt"
-        height: 9
-    tags: ["exploration", "ship", "steam", "voyage", "progress"]
-
-  - name: "Sailboat Simple"
-    description: "Simple sailboat on water"
-    variants:
-      - width: 37
-        file: "exploration/sailboat_simple_20.txt"
-        height: 9
-    tags: ["exploration", "boat", "sailing", "simple", "journey"]
-
-  - name: "Sailboat Small"
-    description: "Small sailboat with single sail"
-    variants:
-      - width: 15
-        file: "exploration/sailboat_small_15.txt"
-        height: 9
-    tags: ["exploration", "boat", "sailing", "small", "simple"]
-
-  - name: "Lighthouse and Boat"
-    description: "Lighthouse guiding boat to shore"
-    variants:
-      - width: 38
-        file: "exploration/lighthouse_boat_100.txt"
-        height: 14
-    tags: ["exploration", "lighthouse", "guidance", "boat", "beacon"]
-
-  - name: "Compass Simple"
-    description: "Basic compass rose design"
-    variants:
-      - width: 19
-        file: "exploration/compass_simple_15.txt"
-        height: 7
-    tags: ["exploration", "compass", "navigation", "direction", "simple"]
-
-  - name: "Compass Detailed"
-    description: "Detailed compass with cardinal points"
-    variants:
-      - width: 17
-        file: "exploration/compass_detailed_15.txt"
-        height: 11
-    tags: ["exploration", "compass", "navigation", "direction", "detailed"]
-
-  - name: "Compass Directional"
-    description: "Directional compass with arrow"
-    variants:
-      - width: 17
-        file: "exploration/compass_directional_15.txt"
-        height: 9
-    tags: ["exploration", "compass", "navigation", "direction", "arrow"]
-
-  - name: "Compass Ornate"
-    description: "Ornate decorative compass design"
-    variants:
-      - width: 19
-        file: "exploration/compass_ornate_18.txt"
-        height: 11
-    tags: ["exploration", "compass", "navigation", "ornate", "decorative"]
-
-  - name: "Map with Compass"
-    description: "Map featuring compass rose"
-    variants:
-      - width: 22
-        file: "exploration/map_compass_20.txt"
-        height: 13
-    tags: ["exploration", "map", "compass", "navigation", "cartography"]
-
-  - name: "Map Grid"
-    description: "Grid-style navigation map"
-    variants:
-      - width: 17
-        file: "exploration/map_grid_18.txt"
-        height: 7
-    tags: ["exploration", "map", "grid", "navigation", "cartography"]
-
-  - name: "Treasure Map"
-    description: "Map with X marking treasure location"
-    variants:
-      - width: 16
-        file: "exploration/map_treasure_15.txt"
-        height: 7
-    tags: ["exploration", "map", "treasure", "adventure", "discovery"]
-
-  - name: "Telescope Simple"
-    description: "Simple telescope for stargazing"
-    variants:
-      - width: 12
-        file: "exploration/telescope_simple_12.txt"
-        height: 9
-    tags: ["exploration", "telescope", "stars", "discovery", "astronomy"]
-
-  - name: "Telescope and Stars"
-    description: "Telescope pointed at night sky"
-    variants:
-      - width: 17
-        file: "exploration/telescope_stars_15.txt"
-        height: 10
-    tags: ["exploration", "telescope", "stars", "astronomy", "discovery"]
-
-  - name: "Horizon with Sun"
-    description: "Sun rising over horizon line"
-    variants:
-      - width: 21
-        file: "exploration/horizon_sun_20.txt"
-        height: 6
-    tags: ["exploration", "horizon", "sun", "sunrise", "new-beginning"]
-
-  - name: "Horizon with Stars"
-    description: "Starry horizon at twilight"
-    variants:
-      - width: 20
-        file: "exploration/horizon_stars_20.txt"
-        height: 6
-    tags: ["exploration", "horizon", "stars", "twilight", "cosmos"]
-
-  - name: "Sunset Horizon"
-    description: "Sunset over distant horizon"
-    variants:
-      - width: 22
-        file: "exploration/horizon_sunset_25.txt"
-        height: 6
-    tags: ["exploration", "horizon", "sunset", "evening", "beauty"]
-
-  - name: "Airplane Simple"
-    description: "Simple airplane in flight"
-    variants:
-      - width: 17
-        file: "exploration/airplane_simple_12.txt"
-        height: 4
-    tags: ["exploration", "airplane", "flight", "travel", "simple"]
-
-  - name: "Airplane Front View"
-    description: "Airplane viewed from front"
-    variants:
-      - width: 23
-        file: "exploration/airplane_front_20.txt"
-        height: 6
-    tags: ["exploration", "airplane", "flight", "travel", "perspective"]
-
-  - name: "Airplane Top View"
-    description: "Airplane viewed from above"
-    variants:
-      - width: 37
-        file: "exploration/airplane_top_45.txt"
-        height: 8
-    tags: ["exploration", "airplane", "flight", "travel", "aerial"]
-
-  - name: "Suspension Bridge"
-    description: "Large suspension bridge spanning distance"
-    variants:
-      - width: 68
-        file: "exploration/bridge_suspension_120.txt"
-        height: 21
-    tags: ["exploration", "bridge", "connection", "engineering", "journey"]
-
-  - name: "Garden Arch"
-    description: "Ornate garden archway"
-    variants:
-      - width: 86
-        file: "exploration/garden_arch_120.txt"
-        height: 42
-    tags: ["exploration", "garden", "arch", "passage", "beauty"]
-
-  - name: "Escher Perspective"
-    description: "Impossible Escher-style perspective"
-    variants:
-      - width: 67
-        file: "exploration/escher_perspective_120.txt"
-        height: 29
-    tags: ["exploration", "escher", "perspective", "impossible", "art"]
-
-  - name: "Escher Waterfall"
-    description: "Impossible waterfall in Escher style"
-    variants:
-      - width: 72
-        file: "exploration/escher_waterfall_120.txt"
-        height: 65
-    tags: ["exploration", "escher", "waterfall", "impossible", "paradox"]
-
+- name: Sailing Ship Large
+  description: Large sailing vessel with full rigging
+  variants:
+  - width: 62
+    file: exploration/ship_large_sailing_60.txt
+    height: 9
+  tags:
+  - exploration
+  - ship
+  - sailing
+  - voyage
+  - adventure
+- name: Viking Ship
+  description: Viking longship with dragon prow
+  variants:
+  - width: 33
+    file: exploration/ship_viking_47.txt
+    height: 5
+  tags:
+  - exploration
+  - ship
+  - viking
+  - voyage
+  - adventure
+- name: Ship on Waves
+  description: Ship sailing across ocean waves
+  variants:
+  - width: 46
+    file: exploration/ship_waves_45.txt
+    height: 8
+  tags:
+  - exploration
+  - ship
+  - ocean
+  - voyage
+  - journey
+- name: Lighthouse and Boat
+  description: Lighthouse guiding boat to shore
+  variants:
+  - width: 38
+    file: exploration/lighthouse_boat_100.txt
+    height: 14
+  tags:
+  - exploration
+  - lighthouse
+  - guidance
+  - boat
+  - beacon
+- name: Compass Simple
+  description: Basic compass rose design
+  variants:
+  - width: 19
+    file: exploration/compass_simple_15.txt
+    height: 7
+  tags:
+  - exploration
+  - compass
+  - navigation
+  - direction
+  - simple
+- name: Compass Detailed
+  description: Detailed compass with cardinal points
+  variants:
+  - width: 17
+    file: exploration/compass_detailed_15.txt
+    height: 11
+  tags:
+  - exploration
+  - compass
+  - navigation
+  - direction
+  - detailed
+- name: Compass Directional
+  description: Directional compass with arrow
+  variants:
+  - width: 17
+    file: exploration/compass_directional_15.txt
+    height: 9
+  tags:
+  - exploration
+  - compass
+  - navigation
+  - direction
+  - arrow
+- name: Map Grid
+  description: Grid-style navigation map
+  variants:
+  - width: 17
+    file: exploration/map_grid_18.txt
+    height: 7
+  tags:
+  - exploration
+  - map
+  - grid
+  - navigation
+  - cartography
+- name: Treasure Map
+  description: Map with X marking treasure location
+  variants:
+  - width: 16
+    file: exploration/map_treasure_15.txt
+    height: 7
+  tags:
+  - exploration
+  - map
+  - treasure
+  - adventure
+  - discovery
+- name: Telescope and Stars
+  description: Telescope pointed at night sky
+  variants:
+  - width: 17
+    file: exploration/telescope_stars_15.txt
+    height: 10
+  tags:
+  - exploration
+  - telescope
+  - stars
+  - astronomy
+  - discovery
+- name: Horizon with Stars
+  description: Starry horizon at twilight
+  variants:
+  - width: 20
+    file: exploration/horizon_stars_20.txt
+    height: 6
+  tags:
+  - exploration
+  - horizon
+  - stars
+  - twilight
+  - cosmos
+- name: Sunset Horizon
+  description: Sunset over distant horizon
+  variants:
+  - width: 22
+    file: exploration/horizon_sunset_25.txt
+    height: 6
+  tags:
+  - exploration
+  - horizon
+  - sunset
+  - evening
+  - beauty
+- name: Suspension Bridge
+  description: Large suspension bridge spanning distance
+  variants:
+  - width: 68
+    file: exploration/bridge_suspension_120.txt
+    height: 21
+  tags:
+  - exploration
+  - bridge
+  - connection
+  - engineering
+  - journey
+- name: Garden Arch
+  description: Ornate garden archway
+  variants:
+  - width: 86
+    file: exploration/garden_arch_120.txt
+    height: 42
+  tags:
+  - exploration
+  - garden
+  - arch
+  - passage
+  - beauty
+- name: Escher Perspective
+  description: Impossible Escher-style perspective
+  variants:
+  - width: 67
+    file: exploration/escher_perspective_120.txt
+    height: 29
+  tags:
+  - exploration
+  - escher
+  - perspective
+  - impossible
+  - art
+- name: Escher Waterfall
+  description: Impossible waterfall in Escher style
+  variants:
+  - width: 72
+    file: exploration/escher_waterfall_120.txt
+    height: 65
+  tags:
+  - exploration
+  - escher
+  - waterfall
+  - impossible
+  - paradox
 nature:
-  - name: "Autumn Tree"
-    description: "Tree with autumn foliage"
-    variants:
-      - width: 51
-        file: "nature/autumn_tree_100.txt"
-        height: 28
-    tags: ["nature", "tree", "autumn", "season", "change"]
-
-  - name: "Christmas Tree"
-    description: "Decorated Christmas tree"
-    variants:
-      - width: 28
-        file: "nature/christmas_tree_60.txt"
-        height: 17
-    tags: ["nature", "tree", "christmas", "celebration", "winter"]
-
-  - name: "Detailed Tree"
-    description: "Detailed tree with branches and leaves"
-    variants:
-      - width: 53
-        file: "nature/tree_detailed_80.txt"
-        height: 13
-    tags: ["nature", "tree", "detailed", "growth", "life"]
-
-  - name: "Forest Trees"
-    description: "Group of trees forming forest"
-    variants:
-      - width: 77
-        file: "nature/trees_forest_100.txt"
-        height: 22
-    tags: ["nature", "tree", "forest", "woodland", "ecosystem"]
-
-  - name: "Palm Tree"
-    description: "Tropical palm tree"
-    variants:
-      - width: 19
-        file: "nature/palm_tree_60.txt"
-        height: 30
-    tags: ["nature", "tree", "palm", "tropical", "beach"]
-
-  - name: "Windmill"
-    description: "Traditional windmill structure"
-    variants:
-      - width: 37
-        file: "nature/windmill_100.txt"
-        height: 26
-    tags: ["nature", "windmill", "energy", "pastoral", "sustainability"]
-
-  - name: "Sunset Detailed"
-    description: "Detailed sunset with clouds"
-    variants:
-      - width: 78
-        file: "nature/sunset_detailed_100.txt"
-        height: 11
-    tags: ["nature", "sunset", "clouds", "beauty", "evening"]
-
-  - name: "Sunset Landscape"
-    description: "Sunset over landscape"
-    variants:
-      - width: 52
-        file: "nature/sunset_landscape_80.txt"
-        height: 6
-    tags: ["nature", "sunset", "landscape", "horizon", "beauty"]
-
-  - name: "Ocean Waves"
-    description: "Ocean waves rolling to shore"
-    variants:
-      - width: 70
-        file: "nature/ocean_waves_100.txt"
-        height: 26
-    tags: ["nature", "ocean", "waves", "water", "rhythm"]
-
-  - name: "Nature Landscape"
-    description: "Scenic natural landscape"
-    variants:
-      - width: 48
-        file: "nature/nature_landscape_100.txt"
-        height: 16
-    tags: ["nature", "landscape", "scenery", "vista", "peace"]
-
+- name: Autumn Tree
+  description: Tree with autumn foliage
+  variants:
+  - width: 51
+    file: nature/autumn_tree_100.txt
+    height: 28
+  tags:
+  - nature
+  - tree
+  - autumn
+  - season
+  - change
+- name: Christmas Tree
+  description: Decorated Christmas tree
+  variants:
+  - width: 28
+    file: nature/christmas_tree_60.txt
+    height: 17
+  tags:
+  - nature
+  - tree
+  - christmas
+  - celebration
+  - winter
+- name: Detailed Tree
+  description: Detailed tree with branches and leaves
+  variants:
+  - width: 53
+    file: nature/tree_detailed_80.txt
+    height: 13
+  tags:
+  - nature
+  - tree
+  - detailed
+  - growth
+  - life
+- name: Forest Trees
+  description: Group of trees forming forest
+  variants:
+  - width: 77
+    file: nature/trees_forest_100.txt
+    height: 22
+  tags:
+  - nature
+  - tree
+  - forest
+  - woodland
+  - ecosystem
+- name: Palm Tree
+  description: Tropical palm tree
+  variants:
+  - width: 19
+    file: nature/palm_tree_60.txt
+    height: 30
+  tags:
+  - nature
+  - tree
+  - palm
+  - tropical
+  - beach
+- name: Windmill
+  description: Traditional windmill structure
+  variants:
+  - width: 37
+    file: nature/windmill_100.txt
+    height: 26
+  tags:
+  - nature
+  - windmill
+  - energy
+  - pastoral
+  - sustainability
+- name: Sunset Detailed
+  description: Detailed sunset with clouds
+  variants:
+  - width: 78
+    file: nature/sunset_detailed_100.txt
+    height: 11
+  tags:
+  - nature
+  - sunset
+  - clouds
+  - beauty
+  - evening
+- name: Sunset Landscape
+  description: Sunset over landscape
+  variants:
+  - width: 52
+    file: nature/sunset_landscape_80.txt
+    height: 6
+  tags:
+  - nature
+  - sunset
+  - landscape
+  - horizon
+  - beauty
+- name: Ocean Waves
+  description: Ocean waves rolling to shore
+  variants:
+  - width: 70
+    file: nature/ocean_waves_100.txt
+    height: 26
+  tags:
+  - nature
+  - ocean
+  - waves
+  - water
+  - rhythm
+- name: Nature Landscape
+  description: Scenic natural landscape
+  variants:
+  - width: 48
+    file: nature/nature_landscape_100.txt
+    height: 16
+  tags:
+  - nature
+  - landscape
+  - scenery
+  - vista
+  - peace
 wisdom:
-  - name: "Owl with Tree"
-    description: "Owl perched in tree at night"
-    variants:
-      - width: 26
-        file: "wisdom/owl_night_tree_100.txt"
-        height: 13
-    tags: ["wisdom", "owl", "night", "knowledge", "nature"]
-
-  - name: "Book Closed"
-    description: "Closed book cover"
-    variants:
-      - width: 51
-        file: "wisdom/book_60.txt"
-        height: 6
-    tags: ["wisdom", "book", "knowledge", "learning", "simple"]
-
-  - name: "Book Open"
-    description: "Open book with pages visible"
-    variants:
-      - width: 45
-        file: "wisdom/book_open_60.txt"
-        height: 7
-    tags: ["wisdom", "book", "knowledge", "learning", "reading"]
-
-  - name: "Bookshelf Library"
-    description: "Bookshelf filled with volumes"
-    variants:
-      - width: 42
-        file: "wisdom/bookshelf_library_80.txt"
-        height: 10
-    tags: ["wisdom", "bookshelf", "library", "knowledge", "collection"]
-
-  - name: "Library"
-    description: "Grand library interior"
-    variants:
-      - width: 59
-        file: "wisdom/library_120.txt"
-        height: 22
-    tags: ["wisdom", "library", "books", "knowledge", "learning"]
-
-  - name: "Coffee and Book"
-    description: "Coffee cup with inkwell and book"
-    variants:
-      - width: 70
-        file: "wisdom/coffee_ink_book_100.txt"
-        height: 9
-    tags: ["wisdom", "coffee", "book", "study", "contemplation"]
-
+- name: Owl with Tree
+  description: Owl perched in tree at night
+  variants:
+  - width: 26
+    file: wisdom/owl_night_tree_100.txt
+    height: 13
+  tags:
+  - wisdom
+  - owl
+  - night
+  - knowledge
+  - nature
+- name: Book Closed
+  description: Closed book cover
+  variants:
+  - width: 51
+    file: wisdom/book_60.txt
+    height: 6
+  tags:
+  - wisdom
+  - book
+  - knowledge
+  - learning
+  - simple
+- name: Book Open
+  description: Open book with pages visible
+  variants:
+  - width: 45
+    file: wisdom/book_open_60.txt
+    height: 7
+  tags:
+  - wisdom
+  - book
+  - knowledge
+  - learning
+  - reading
+- name: Bookshelf Library
+  description: Bookshelf filled with volumes
+  variants:
+  - width: 42
+    file: wisdom/bookshelf_library_80.txt
+    height: 10
+  tags:
+  - wisdom
+  - bookshelf
+  - library
+  - knowledge
+  - collection
+- name: Library
+  description: Grand library interior
+  variants:
+  - width: 59
+    file: wisdom/library_120.txt
+    height: 22
+  tags:
+  - wisdom
+  - library
+  - books
+  - knowledge
+  - learning
+- name: Coffee and Book
+  description: Coffee cup with inkwell and book
+  variants:
+  - width: 70
+    file: wisdom/coffee_ink_book_100.txt
+    height: 9
+  tags:
+  - wisdom
+  - coffee
+  - book
+  - study
+  - contemplation
 general:
-  - name: "Ornate Border Small"
-    description: "Small ornate border frame"
-    variants:
-      - width: 27
-        file: "general/ornate_border_40.txt"
-        height: 7
-    tags: ["general", "border", "frame", "ornate", "small"]
-
-  - name: "Ornate Divider"
-    description: "Ornate decorative divider"
-    variants:
-      - width: 75
-        file: "general/ornate_divider_120.txt"
-        height: 44
-    tags: ["general", "divider", "ornate", "decorative", "large"]
-
-  - name: "Elegant Frame"
-    description: "Elegant rectangular frame"
-    variants:
-      - width: 63
-        file: "general/elegant_frame_100.txt"
-        height: 23
-    tags: ["general", "frame", "border", "elegant", "decorative"]
-
-  - name: "Ornate Frame"
-    description: "Ornate decorative frame"
-    variants:
-      - width: 73
-        file: "general/frame_ornate_80.txt"
-        height: 20
-    tags: ["general", "frame", "ornate", "decorative", "border"]
-
-  - name: "Page Border"
-    description: "Simple page border"
-    variants:
-      - width: 38
-        file: "general/page_border_80.txt"
-        height: 18
-    tags: ["general", "border", "page", "frame", "simple"]
-
-  - name: "Corner Brackets"
-    description: "Corner bracket decorations"
-    variants:
-      - width: 56
-        file: "general/corner_brackets_100.txt"
-        height: 11
-    tags: ["general", "corner", "bracket", "decorative", "frame"]
-
-  - name: "Swirl Border"
-    description: "Flowing swirl border pattern"
-    variants:
-      - width: 79
-        file: "general/swirl_border_100.txt"
-        height: 24
-    tags: ["general", "swirl", "border", "flowing", "decorative"]
-
-  - name: "Vine Pattern"
-    description: "Vine and leaf pattern"
-    variants:
-      - width: 70
-        file: "general/vine_pattern_120.txt"
-        height: 28
-    tags: ["general", "vine", "pattern", "nature", "decorative"]
-
-  - name: "Vines Long"
-    description: "Long vertical vine pattern"
-    variants:
-      - width: 71
-        file: "general/vines_long_120.txt"
-        height: 45
-    tags: ["general", "vine", "pattern", "vertical", "nature"]
-
-  - name: "Wave Pattern"
-    description: "Repeating wave pattern"
-    variants:
-      - width: 70
-        file: "general/wave_pattern_80.txt"
-        height: 18
-    tags: ["general", "wave", "pattern", "flowing", "rhythm"]
-
-  - name: "Zigzag Pattern"
-    description: "Angular zigzag pattern"
-    variants:
-      - width: 70
-        file: "general/zigzag_pattern_100.txt"
-        height: 18
-    tags: ["general", "zigzag", "pattern", "angular", "geometric"]
-
-  - name: "Diagonal Pattern"
-    description: "Diagonal stripe pattern"
-    variants:
-      - width: 64
-        file: "general/diagonal_pattern_80.txt"
-        height: 18
-    tags: ["general", "diagonal", "pattern", "geometric", "lines"]
-
-  - name: "Celtic Knot Small"
-    description: "Small Celtic knot design"
-    variants:
-      - width: 18
-        file: "general/celtic_knot_small_40.txt"
-        height: 16
-    tags: ["general", "celtic", "knot", "pattern", "small"]
-
-  - name: "Celtic Knot"
-    description: "Large Celtic knot design"
-    variants:
-      - width: 66
-        file: "general/celtic_knot_80.txt"
-        height: 20
-    tags: ["general", "celtic", "knot", "pattern", "intricate"]
-
-  - name: "3D Cube"
-    description: "Three-dimensional cube"
-    variants:
-      - width: 34
-        file: "general/cube_3d_80.txt"
-        height: 15
-    tags: ["general", "cube", "3d", "geometric", "perspective"]
-
-  - name: "Escher Stairs"
-    description: "Impossible Escher-style stairs"
-    variants:
-      - width: 24
-        file: "general/escher_stairs_60.txt"
-        height: 13
-    tags: ["general", "escher", "stairs", "impossible", "paradox"]
-
-  - name: "Nested Triangles"
-    description: "Triangles within triangles"
-    variants:
-      - width: 22
-        file: "general/nested_triangles_60.txt"
-        height: 22
-    tags: ["general", "triangle", "nested", "geometric", "fractal"]
-
-  - name: "Scroll"
-    description: "Decorative scroll parchment"
-    variants:
-      - width: 67
-        file: "general/scroll_80.txt"
-        height: 26
-    tags: ["general", "scroll", "parchment", "decorative", "ancient"]
-
-  - name: "Excited Stars"
-    description: "Burst of stars and sparkles"
-    variants:
-      - width: 73
-        file: "general/excited_stars_100.txt"
-        height: 30
-    tags: ["general", "stars", "sparkle", "celebration", "energy"]
-
-  - name: "Monochrome ASCII"
-    description: "Abstract monochrome ASCII art"
-    variants:
-      - width: 55
-        file: "general/monochrome_ascii_100.txt"
-        height: 23
-    tags: ["general", "abstract", "monochrome", "artistic", "pattern"]
-
-  - name: "Verge Logo"
-    description: "The Verge publication logo"
-    variants:
-      - width: 39
-        file: "general/verge_logo_100.txt"
-        height: 22
-    tags: ["general", "logo", "brand", "geometric", "modern"]
-
+- name: Ornate Border Small
+  description: Small ornate border frame
+  variants:
+  - width: 27
+    file: general/ornate_border_40.txt
+    height: 7
+  tags:
+  - general
+  - border
+  - frame
+  - ornate
+  - small
+- name: Ornate Divider
+  description: Ornate decorative divider
+  variants:
+  - width: 75
+    file: general/ornate_divider_120.txt
+    height: 44
+  tags:
+  - general
+  - divider
+  - ornate
+  - decorative
+  - large
+- name: Elegant Frame
+  description: Elegant rectangular frame
+  variants:
+  - width: 63
+    file: general/elegant_frame_100.txt
+    height: 23
+  tags:
+  - general
+  - frame
+  - border
+  - elegant
+  - decorative
+- name: Ornate Frame
+  description: Ornate decorative frame
+  variants:
+  - width: 73
+    file: general/frame_ornate_80.txt
+    height: 20
+  tags:
+  - general
+  - frame
+  - ornate
+  - decorative
+  - border
+- name: Page Border
+  description: Simple page border
+  variants:
+  - width: 38
+    file: general/page_border_80.txt
+    height: 18
+  tags:
+  - general
+  - border
+  - page
+  - frame
+  - simple
+- name: Corner Brackets
+  description: Corner bracket decorations
+  variants:
+  - width: 56
+    file: general/corner_brackets_100.txt
+    height: 11
+  tags:
+  - general
+  - corner
+  - bracket
+  - decorative
+  - frame
+- name: Swirl Border
+  description: Flowing swirl border pattern
+  variants:
+  - width: 79
+    file: general/swirl_border_100.txt
+    height: 24
+  tags:
+  - general
+  - swirl
+  - border
+  - flowing
+  - decorative
+- name: Vine Pattern
+  description: Vine and leaf pattern
+  variants:
+  - width: 70
+    file: general/vine_pattern_120.txt
+    height: 28
+  tags:
+  - general
+  - vine
+  - pattern
+  - nature
+  - decorative
+- name: Vines Long
+  description: Long vertical vine pattern
+  variants:
+  - width: 71
+    file: general/vines_long_120.txt
+    height: 45
+  tags:
+  - general
+  - vine
+  - pattern
+  - vertical
+  - nature
+- name: Wave Pattern
+  description: Repeating wave pattern
+  variants:
+  - width: 70
+    file: general/wave_pattern_80.txt
+    height: 18
+  tags:
+  - general
+  - wave
+  - pattern
+  - flowing
+  - rhythm
+- name: Zigzag Pattern
+  description: Angular zigzag pattern
+  variants:
+  - width: 70
+    file: general/zigzag_pattern_100.txt
+    height: 18
+  tags:
+  - general
+  - zigzag
+  - pattern
+  - angular
+  - geometric
+- name: Diagonal Pattern
+  description: Diagonal stripe pattern
+  variants:
+  - width: 64
+    file: general/diagonal_pattern_80.txt
+    height: 18
+  tags:
+  - general
+  - diagonal
+  - pattern
+  - geometric
+  - lines
+- name: Celtic Knot Small
+  description: Small Celtic knot design
+  variants:
+  - width: 18
+    file: general/celtic_knot_small_40.txt
+    height: 16
+  tags:
+  - general
+  - celtic
+  - knot
+  - pattern
+  - small
+- name: Celtic Knot
+  description: Large Celtic knot design
+  variants:
+  - width: 66
+    file: general/celtic_knot_80.txt
+    height: 20
+  tags:
+  - general
+  - celtic
+  - knot
+  - pattern
+  - intricate
+- name: 3D Cube
+  description: Three-dimensional cube
+  variants:
+  - width: 34
+    file: general/cube_3d_80.txt
+    height: 15
+  tags:
+  - general
+  - cube
+  - 3d
+  - geometric
+  - perspective
+- name: Escher Stairs
+  description: Impossible Escher-style stairs
+  variants:
+  - width: 24
+    file: general/escher_stairs_60.txt
+    height: 13
+  tags:
+  - general
+  - escher
+  - stairs
+  - impossible
+  - paradox
+- name: Nested Triangles
+  description: Triangles within triangles
+  variants:
+  - width: 22
+    file: general/nested_triangles_60.txt
+    height: 22
+  tags:
+  - general
+  - triangle
+  - nested
+  - geometric
+  - fractal
+- name: Scroll
+  description: Decorative scroll parchment
+  variants:
+  - width: 67
+    file: general/scroll_80.txt
+    height: 26
+  tags:
+  - general
+  - scroll
+  - parchment
+  - decorative
+  - ancient
+- name: Excited Stars
+  description: Burst of stars and sparkles
+  variants:
+  - width: 73
+    file: general/excited_stars_100.txt
+    height: 30
+  tags:
+  - general
+  - stars
+  - sparkle
+  - celebration
+  - energy
+- name: Monochrome ASCII
+  description: Abstract monochrome ASCII art
+  variants:
+  - width: 55
+    file: general/monochrome_ascii_100.txt
+    height: 23
+  tags:
+  - general
+  - abstract
+  - monochrome
+  - artistic
+  - pattern
+- name: Verge Logo
+  description: The Verge publication logo
+  variants:
+  - width: 39
+    file: general/verge_logo_100.txt
+    height: 22
+  tags:
+  - general
+  - logo
+  - brand
+  - geometric
+  - modern
 animals:
-  - name: "Cat Simple"
-    description: "Simple minimalist cat"
-    variants:
-      - width: 18
-        file: "animals/cat_simple_40.txt"
-        height: 3
-    tags: ["animals", "cat", "simple", "minimal", "pet"]
-
-  - name: "Cat Face"
-    description: "Cat face looking forward"
-    variants:
-      - width: 40
-        file: "animals/cat_face_60.txt"
-        height: 4
-    tags: ["animals", "cat", "face", "cute", "pet"]
-
-  - name: "Cat Head"
-    description: "Detailed cat head portrait"
-    variants:
-      - width: 54
-        file: "animals/cat_head_80.txt"
-        height: 5
-    tags: ["animals", "cat", "head", "portrait", "detailed"]
-
-  - name: "Cat Curious"
-    description: "Curious cat looking up"
-    variants:
-      - width: 26
-        file: "animals/cat_curious_60.txt"
-        height: 7
-    tags: ["animals", "cat", "curious", "playful", "pet"]
-
-  - name: "Cat Sleeping"
-    description: "Cat curled up sleeping"
-    variants:
-      - width: 35
-        file: "animals/cat_sleeping_60.txt"
-        height: 4
-    tags: ["animals", "cat", "sleeping", "rest", "peaceful"]
-
-  - name: "Cat Surprised"
-    description: "Cat with surprised expression"
-    variants:
-      - width: 17
-        file: "animals/cat_surprised_60.txt"
-        height: 10
-    tags: ["animals", "cat", "surprised", "expression", "funny"]
-
-  - name: "Cat Stretching"
-    description: "Cat stretching upward"
-    variants:
-      - width: 32
-        file: "animals/cat_stretching_60.txt"
-        height: 15
-    tags: ["animals", "cat", "stretching", "movement", "flexible"]
-
-  - name: "Cat Cute"
-    description: "Adorable sitting cat"
-    variants:
-      - width: 43
-        file: "animals/cat_cute_80.txt"
-        height: 11
-    tags: ["animals", "cat", "cute", "sitting", "adorable"]
-
-  - name: "Cat Playful"
-    description: "Playful cat in motion"
-    variants:
-      - width: 42
-        file: "animals/cat_playful_80.txt"
-        height: 12
-    tags: ["animals", "cat", "playful", "movement", "energetic"]
-
-  - name: "Cat Portrait"
-    description: "Detailed cat portrait"
-    variants:
-      - width: 48
-        file: "animals/cat_portrait_80.txt"
-        height: 31
-    tags: ["animals", "cat", "portrait", "detailed", "majestic"]
-
-  - name: "Cats Conversation"
-    description: "Two cats facing each other"
-    variants:
-      - width: 57
-        file: "animals/cats_conversation_120.txt"
-        height: 20
-    tags: ["animals", "cat", "conversation", "pair", "social"]
-
-  - name: "Owl Standing"
-    description: "Owl standing on perch"
-    variants:
-      - width: 21
-        file: "animals/owl_standing_60.txt"
-        height: 13
-    tags: ["animals", "owl", "standing", "wisdom", "bird"]
-
-  - name: "Bird Flying"
-    description: "Bird in flight with wings spread"
-    variants:
-      - width: 16
-        file: "animals/bird_flying_60.txt"
-        height: 9
-    tags: ["animals", "bird", "flying", "freedom", "wings"]
-
-  - name: "Birds Perched"
-    description: "Multiple birds perched on branch"
-    variants:
-      - width: 52
-        file: "animals/birds_perched_120.txt"
-        height: 16
-    tags: ["animals", "bird", "perched", "group", "peaceful"]
-
-  - name: "Regal Bird"
-    description: "Large majestic bird"
-    variants:
-      - width: 67
-        file: "animals/regal_bird_120.txt"
-        height: 23
-    tags: ["animals", "bird", "regal", "majestic", "large"]
-
-  - name: "Parakeets"
-    description: "Small parakeet pair"
-    variants:
-      - width: 17
-        file: "animals/parakeets_40.txt"
-        height: 6
-    tags: ["animals", "bird", "parakeet", "small", "tropical"]
-
-  - name: "Parrot"
-    description: "Colorful parrot"
-    variants:
-      - width: 32
-        file: "animals/parrot_100.txt"
-        height: 16
-    tags: ["animals", "bird", "parrot", "tropical", "colorful"]
-
-  - name: "Parrot Large"
-    description: "Large detailed parrot"
-    variants:
-      - width: 45
-        file: "animals/parrot_large_120.txt"
-        height: 19
-    tags: ["animals", "bird", "parrot", "large", "detailed"]
-
-  - name: "Swan"
-    description: "Graceful swan on water"
-    variants:
-      - width: 31
-        file: "animals/swan_80.txt"
-        height: 11
-    tags: ["animals", "bird", "swan", "graceful", "elegant"]
-
-  - name: "Penguin"
-    description: "Single penguin standing"
-    variants:
-      - width: 12
-        file: "animals/penguin_40.txt"
-        height: 3
-    tags: ["animals", "bird", "penguin", "small", "arctic"]
-
-  - name: "Penguins"
-    description: "Pair of penguins"
-    variants:
-      - width: 11
-        file: "animals/penguins_40.txt"
-        height: 3
-    tags: ["animals", "bird", "penguin", "pair", "arctic"]
-
-  - name: "Flamingo in Rain"
-    description: "Flamingo standing in rainfall"
-    variants:
-      - width: 65
-        file: "animals/flamingo_rain_100.txt"
-        height: 17
-    tags: ["animals", "bird", "flamingo", "rain", "tropical"]
-
-  - name: "Flock of Ducks"
-    description: "Multiple ducks in formation"
-    variants:
-      - width: 61
-        file: "animals/ducks_flock_100.txt"
-        height: 4
-    tags: ["animals", "bird", "duck", "flock", "group"]
-
+- name: Cat Simple
+  description: Simple minimalist cat
+  variants:
+  - width: 18
+    file: animals/cat_simple_40.txt
+    height: 3
+  tags:
+  - animals
+  - cat
+  - simple
+  - minimal
+  - pet
+- name: Cat Face
+  description: Cat face looking forward
+  variants:
+  - width: 40
+    file: animals/cat_face_60.txt
+    height: 4
+  tags:
+  - animals
+  - cat
+  - face
+  - cute
+  - pet
+- name: Cat Head
+  description: Detailed cat head portrait
+  variants:
+  - width: 54
+    file: animals/cat_head_80.txt
+    height: 5
+  tags:
+  - animals
+  - cat
+  - head
+  - portrait
+  - detailed
+- name: Cat Curious
+  description: Curious cat looking up
+  variants:
+  - width: 26
+    file: animals/cat_curious_60.txt
+    height: 7
+  tags:
+  - animals
+  - cat
+  - curious
+  - playful
+  - pet
+- name: Cat Sleeping
+  description: Cat curled up sleeping
+  variants:
+  - width: 35
+    file: animals/cat_sleeping_60.txt
+    height: 4
+  tags:
+  - animals
+  - cat
+  - sleeping
+  - rest
+  - peaceful
+- name: Cat Surprised
+  description: Cat with surprised expression
+  variants:
+  - width: 17
+    file: animals/cat_surprised_60.txt
+    height: 10
+  tags:
+  - animals
+  - cat
+  - surprised
+  - expression
+  - funny
+- name: Cat Stretching
+  description: Cat stretching upward
+  variants:
+  - width: 32
+    file: animals/cat_stretching_60.txt
+    height: 15
+  tags:
+  - animals
+  - cat
+  - stretching
+  - movement
+  - flexible
+- name: Cat Cute
+  description: Adorable sitting cat
+  variants:
+  - width: 43
+    file: animals/cat_cute_80.txt
+    height: 11
+  tags:
+  - animals
+  - cat
+  - cute
+  - sitting
+  - adorable
+- name: Cat Playful
+  description: Playful cat in motion
+  variants:
+  - width: 42
+    file: animals/cat_playful_80.txt
+    height: 12
+  tags:
+  - animals
+  - cat
+  - playful
+  - movement
+  - energetic
+- name: Cat Portrait
+  description: Detailed cat portrait
+  variants:
+  - width: 48
+    file: animals/cat_portrait_80.txt
+    height: 31
+  tags:
+  - animals
+  - cat
+  - portrait
+  - detailed
+  - majestic
+- name: Cats Conversation
+  description: Two cats facing each other
+  variants:
+  - width: 57
+    file: animals/cats_conversation_120.txt
+    height: 20
+  tags:
+  - animals
+  - cat
+  - conversation
+  - pair
+  - social
+- name: Owl Standing
+  description: Owl standing on perch
+  variants:
+  - width: 21
+    file: animals/owl_standing_60.txt
+    height: 13
+  tags:
+  - animals
+  - owl
+  - standing
+  - wisdom
+  - bird
+- name: Bird Flying
+  description: Bird in flight with wings spread
+  variants:
+  - width: 16
+    file: animals/bird_flying_60.txt
+    height: 9
+  tags:
+  - animals
+  - bird
+  - flying
+  - freedom
+  - wings
+- name: Birds Perched
+  description: Multiple birds perched on branch
+  variants:
+  - width: 52
+    file: animals/birds_perched_120.txt
+    height: 16
+  tags:
+  - animals
+  - bird
+  - perched
+  - group
+  - peaceful
+- name: Regal Bird
+  description: Large majestic bird
+  variants:
+  - width: 67
+    file: animals/regal_bird_120.txt
+    height: 23
+  tags:
+  - animals
+  - bird
+  - regal
+  - majestic
+  - large
+- name: Parakeets
+  description: Small parakeet pair
+  variants:
+  - width: 17
+    file: animals/parakeets_40.txt
+    height: 6
+  tags:
+  - animals
+  - bird
+  - parakeet
+  - small
+  - tropical
+- name: Parrot
+  description: Colorful parrot
+  variants:
+  - width: 32
+    file: animals/parrot_100.txt
+    height: 16
+  tags:
+  - animals
+  - bird
+  - parrot
+  - tropical
+  - colorful
+- name: Parrot Large
+  description: Large detailed parrot
+  variants:
+  - width: 45
+    file: animals/parrot_large_120.txt
+    height: 19
+  tags:
+  - animals
+  - bird
+  - parrot
+  - large
+  - detailed
+- name: Swan
+  description: Graceful swan on water
+  variants:
+  - width: 31
+    file: animals/swan_80.txt
+    height: 11
+  tags:
+  - animals
+  - bird
+  - swan
+  - graceful
+  - elegant
+- name: Penguin
+  description: Single penguin standing
+  variants:
+  - width: 12
+    file: animals/penguin_40.txt
+    height: 3
+  tags:
+  - animals
+  - bird
+  - penguin
+  - small
+  - arctic
+- name: Penguins
+  description: Pair of penguins
+  variants:
+  - width: 11
+    file: animals/penguins_40.txt
+    height: 3
+  tags:
+  - animals
+  - bird
+  - penguin
+  - pair
+  - arctic
+- name: Flamingo in Rain
+  description: Flamingo standing in rainfall
+  variants:
+  - width: 65
+    file: animals/flamingo_rain_100.txt
+    height: 17
+  tags:
+  - animals
+  - bird
+  - flamingo
+  - rain
+  - tropical
+- name: Flock of Ducks
+  description: Multiple ducks in formation
+  variants:
+  - width: 61
+    file: animals/ducks_flock_100.txt
+    height: 4
+  tags:
+  - animals
+  - bird
+  - duck
+  - flock
+  - group
 urban:
-  - name: "Village Small"
-    description: "Small village scene"
-    variants:
-      - width: 32
-        file: "urban/village_small_60.txt"
-        height: 11
-    tags: ["urban", "village", "buildings", "small", "community"]
-
-  - name: "Mountain House"
-    description: "House on mountainside"
-    variants:
-      - width: 59
-        file: "urban/mountain_house_100.txt"
-        height: 20
-    tags: ["urban", "house", "mountain", "scenic", "dwelling"]
-
-  - name: "House for Sale"
-    description: "House with for-sale sign"
-    variants:
-      - width: 65
-        file: "urban/house_sale_80.txt"
-        height: 16
-    tags: ["urban", "house", "sale", "real-estate", "building"]
-
-  - name: "Castle Keep"
-    description: "Medieval castle keep"
-    variants:
-      - width: 73
-        file: "urban/castle_keep_120.txt"
-        height: 22
-    tags: ["urban", "castle", "medieval", "fortress", "historic"]
-
-  - name: "Castle Village"
-    description: "Castle with surrounding village"
-    variants:
-      - width: 78
-        file: "urban/castle_village_120.txt"
-        height: 38
-    tags: ["urban", "castle", "village", "medieval", "settlement"]
-
-  - name: "Flying Citadel"
-    description: "Fantasy floating citadel"
-    variants:
-      - width: 80
-        file: "urban/citadel_flying_80.txt"
-        height: 13
-    tags: ["urban", "citadel", "fantasy", "flying", "architecture"]
-
-  - name: "Billboard City"
-    description: "City scene with billboard"
-    variants:
-      - width: 77
-        file: "urban/billboard_city_120.txt"
-        height: 16
-    tags: ["urban", "city", "billboard", "modern", "skyline"]
-
-  - name: "Isometric Cities"
-    description: "Isometric city view"
-    variants:
-      - width: 78
-        file: "urban/isometric_cities_120.txt"
-        height: 52
-    tags: ["urban", "city", "isometric", "architecture", "complex"]
-
-  - name: "Observatories"
-    description: "Observatory domes"
-    variants:
-      - width: 62
-        file: "urban/observatories_80.txt"
-        height: 8
-    tags: ["urban", "observatory", "science", "astronomy", "domes"]
-
-  - name: "Telescope Observatory"
-    description: "Large telescope observatory"
-    variants:
-      - width: 60
-        file: "urban/telescope_observatory_100.txt"
-        height: 16
-    tags: ["urban", "observatory", "telescope", "science", "astronomy"]
-
-  - name: "Stonehenge"
-    description: "Ancient Stonehenge monument"
-    variants:
-      - width: 63
-        file: "urban/stonehenge_100.txt"
-        height: 28
-    tags: ["urban", "stonehenge", "monument", "ancient", "mystery"]
-
-  - name: "Toronto Fireworks"
-    description: "Fireworks over Toronto skyline"
-    variants:
-      - width: 58
-        file: "urban/fireworks_toronto_100.txt"
-        height: 19
-    tags: ["urban", "fireworks", "city", "celebration", "skyline"]
-
+- name: Village Small
+  description: Small village scene
+  variants:
+  - width: 32
+    file: urban/village_small_60.txt
+    height: 11
+  tags:
+  - urban
+  - village
+  - buildings
+  - small
+  - community
+- name: Mountain House
+  description: House on mountainside
+  variants:
+  - width: 59
+    file: urban/mountain_house_100.txt
+    height: 20
+  tags:
+  - urban
+  - house
+  - mountain
+  - scenic
+  - dwelling
+- name: House for Sale
+  description: House with for-sale sign
+  variants:
+  - width: 65
+    file: urban/house_sale_80.txt
+    height: 16
+  tags:
+  - urban
+  - house
+  - sale
+  - real-estate
+  - building
+- name: Castle Keep
+  description: Medieval castle keep
+  variants:
+  - width: 73
+    file: urban/castle_keep_120.txt
+    height: 22
+  tags:
+  - urban
+  - castle
+  - medieval
+  - fortress
+  - historic
+- name: Castle Village
+  description: Castle with surrounding village
+  variants:
+  - width: 78
+    file: urban/castle_village_120.txt
+    height: 38
+  tags:
+  - urban
+  - castle
+  - village
+  - medieval
+  - settlement
+- name: Flying Citadel
+  description: Fantasy floating citadel
+  variants:
+  - width: 80
+    file: urban/citadel_flying_80.txt
+    height: 13
+  tags:
+  - urban
+  - citadel
+  - fantasy
+  - flying
+  - architecture
+- name: Billboard City
+  description: City scene with billboard
+  variants:
+  - width: 77
+    file: urban/billboard_city_120.txt
+    height: 16
+  tags:
+  - urban
+  - city
+  - billboard
+  - modern
+  - skyline
+- name: Isometric Cities
+  description: Isometric city view
+  variants:
+  - width: 78
+    file: urban/isometric_cities_120.txt
+    height: 52
+  tags:
+  - urban
+  - city
+  - isometric
+  - architecture
+  - complex
+- name: Observatories
+  description: Observatory domes
+  variants:
+  - width: 62
+    file: urban/observatories_80.txt
+    height: 8
+  tags:
+  - urban
+  - observatory
+  - science
+  - astronomy
+  - domes
+- name: Telescope Observatory
+  description: Large telescope observatory
+  variants:
+  - width: 60
+    file: urban/telescope_observatory_100.txt
+    height: 16
+  tags:
+  - urban
+  - observatory
+  - telescope
+  - science
+  - astronomy
+- name: Stonehenge
+  description: Ancient Stonehenge monument
+  variants:
+  - width: 63
+    file: urban/stonehenge_100.txt
+    height: 28
+  tags:
+  - urban
+  - stonehenge
+  - monument
+  - ancient
+  - mystery
+- name: Toronto Fireworks
+  description: Fireworks over Toronto skyline
+  variants:
+  - width: 58
+    file: urban/fireworks_toronto_100.txt
+    height: 19
+  tags:
+  - urban
+  - fireworks
+  - city
+  - celebration
+  - skyline
 whimsical:
-  - name: "Coffee Table"
-    description: "Small coffee table"
-    variants:
-      - width: 22
-        file: "whimsical/coffee_table_40.txt"
-        height: 6
-    tags: ["whimsical", "furniture", "table", "coffee", "small"]
-
-  - name: "Bookshelf Small"
-    description: "Small bookshelf unit"
-    variants:
-      - width: 26
-        file: "whimsical/bookshelf_40.txt"
-        height: 13
-    tags: ["whimsical", "furniture", "bookshelf", "small", "storage"]
-
-  - name: "Coffee Mug"
-    description: "Steaming coffee mug"
-    variants:
-      - width: 25
-        file: "whimsical/coffee_mug_60.txt"
-        height: 12
-    tags: ["whimsical", "coffee", "mug", "beverage", "warm"]
-
-  - name: "Table Lamp"
-    description: "Table lamp with shade"
-    variants:
-      - width: 36
-        file: "whimsical/lamp_table_60.txt"
-        height: 22
-    tags: ["whimsical", "lamp", "light", "furniture", "illumination"]
-
-  - name: "Eyes"
-    description: "Pair of watchful eyes"
-    variants:
-      - width: 13
-        file: "whimsical/eyes_60.txt"
-        height: 19
-    tags: ["whimsical", "eyes", "watching", "mysterious", "surreal"]
-
-  - name: "Apple and Book"
-    description: "Apple resting on book"
-    variants:
-      - width: 56
-        file: "whimsical/apple_book_80.txt"
-        height: 11
-    tags: ["whimsical", "apple", "book", "learning", "study"]
-
-  - name: "Desk Cabinet"
-    description: "Desk with cabinet drawers"
-    variants:
-      - width: 60
-        file: "whimsical/desk_cabinet_100.txt"
-        height: 16
-    tags: ["whimsical", "desk", "cabinet", "furniture", "workspace"]
-
-  - name: "Desk Workspace"
-    description: "Complete desk workspace"
-    variants:
-      - width: 72
-        file: "whimsical/desk_workspace_120.txt"
-        height: 19
-    tags: ["whimsical", "desk", "workspace", "office", "productivity"]
-
-  - name: "Toolbox"
-    description: "Mechanic's toolbox"
-    variants:
-      - width: 70
-        file: "whimsical/toolbox_120.txt"
-        height: 24
-    tags: ["whimsical", "toolbox", "tools", "craft", "mechanical"]
-
-  - name: "Sleeping Computer"
-    description: "Computer in sleep mode"
-    variants:
-      - width: 40
-        file: "whimsical/sleeping_computer_100.txt"
-        height: 25
-    tags: ["whimsical", "computer", "sleeping", "technology", "rest"]
-
-  - name: "Liminal Maze"
-    description: "Mysterious liminal space maze"
-    variants:
-      - width: 71
-        file: "whimsical/maze_liminal_100.txt"
-        height: 22
-    tags: ["whimsical", "maze", "liminal", "mysterious", "surreal"]
-
+- name: Coffee Table
+  description: Small coffee table
+  variants:
+  - width: 22
+    file: whimsical/coffee_table_40.txt
+    height: 6
+  tags:
+  - whimsical
+  - furniture
+  - table
+  - coffee
+  - small
+- name: Bookshelf Small
+  description: Small bookshelf unit
+  variants:
+  - width: 26
+    file: whimsical/bookshelf_40.txt
+    height: 13
+  tags:
+  - whimsical
+  - furniture
+  - bookshelf
+  - small
+  - storage
+- name: Coffee Mug
+  description: Steaming coffee mug
+  variants:
+  - width: 25
+    file: whimsical/coffee_mug_60.txt
+    height: 12
+  tags:
+  - whimsical
+  - coffee
+  - mug
+  - beverage
+  - warm
+- name: Table Lamp
+  description: Table lamp with shade
+  variants:
+  - width: 36
+    file: whimsical/lamp_table_60.txt
+    height: 22
+  tags:
+  - whimsical
+  - lamp
+  - light
+  - furniture
+  - illumination
+- name: Eyes
+  description: Pair of watchful eyes
+  variants:
+  - width: 13
+    file: whimsical/eyes_60.txt
+    height: 19
+  tags:
+  - whimsical
+  - eyes
+  - watching
+  - mysterious
+  - surreal
+- name: Apple and Book
+  description: Apple resting on book
+  variants:
+  - width: 56
+    file: whimsical/apple_book_80.txt
+    height: 11
+  tags:
+  - whimsical
+  - apple
+  - book
+  - learning
+  - study
+- name: Desk Cabinet
+  description: Desk with cabinet drawers
+  variants:
+  - width: 60
+    file: whimsical/desk_cabinet_100.txt
+    height: 16
+  tags:
+  - whimsical
+  - desk
+  - cabinet
+  - furniture
+  - workspace
+- name: Desk Workspace
+  description: Complete desk workspace
+  variants:
+  - width: 72
+    file: whimsical/desk_workspace_120.txt
+    height: 19
+  tags:
+  - whimsical
+  - desk
+  - workspace
+  - office
+  - productivity
+- name: Toolbox
+  description: Mechanic's toolbox
+  variants:
+  - width: 70
+    file: whimsical/toolbox_120.txt
+    height: 24
+  tags:
+  - whimsical
+  - toolbox
+  - tools
+  - craft
+  - mechanical
+- name: Sleeping Computer
+  description: Computer in sleep mode
+  variants:
+  - width: 40
+    file: whimsical/sleeping_computer_100.txt
+    height: 25
+  tags:
+  - whimsical
+  - computer
+  - sleeping
+  - technology
+  - rest
+- name: Liminal Maze
+  description: Mysterious liminal space maze
+  variants:
+  - width: 71
+    file: whimsical/maze_liminal_100.txt
+    height: 22
+  tags:
+  - whimsical
+  - maze
+  - liminal
+  - mysterious
+  - surreal
 cosmic:
-  - name: "Earth from Space"
-    description: "Earth viewed from space"
-    variants:
-      - width: 64
-        file: "cosmic/earth_space_120.txt"
-        height: 24
-    tags: ["cosmic", "earth", "space", "planet", "perspective"]
-
-  - name: "Jupiter"
-    description: "Gas giant Jupiter"
-    variants:
-      - width: 45
-        file: "cosmic/jupiter_60.txt"
-        height: 10
-    tags: ["cosmic", "jupiter", "planet", "gas-giant", "space"]
-
-  - name: "Saturn Detailed"
-    description: "Detailed Saturn with rings"
-    variants:
-      - width: 76
-        file: "cosmic/saturn_detailed_120.txt"
-        height: 36
-    tags: ["cosmic", "saturn", "planet", "rings", "detailed"]
-
-  - name: "Saturn and Moon"
-    description: "Saturn with moon in orbit"
-    variants:
-      - width: 75
-        file: "cosmic/saturn_moon_100.txt"
-        height: 23
-    tags: ["cosmic", "saturn", "moon", "planet", "orbital"]
-
-  - name: "Starry Landscape"
-    description: "Landscape under starry sky"
-    variants:
-      - width: 81
-        file: "cosmic/starry_landscape_120.txt"
-        height: 17
-    tags: ["cosmic", "stars", "landscape", "night", "celestial"]
+- name: Earth from Space
+  description: Earth viewed from space
+  variants:
+  - width: 64
+    file: cosmic/earth_space_120.txt
+    height: 24
+  tags:
+  - cosmic
+  - earth
+  - space
+  - planet
+  - perspective
+- name: Jupiter
+  description: Gas giant Jupiter
+  variants:
+  - width: 45
+    file: cosmic/jupiter_60.txt
+    height: 10
+  tags:
+  - cosmic
+  - jupiter
+  - planet
+  - gas-giant
+  - space
+- name: Saturn Detailed
+  description: Detailed Saturn with rings
+  variants:
+  - width: 76
+    file: cosmic/saturn_detailed_120.txt
+    height: 36
+  tags:
+  - cosmic
+  - saturn
+  - planet
+  - rings
+  - detailed
+- name: Saturn and Moon
+  description: Saturn with moon in orbit
+  variants:
+  - width: 75
+    file: cosmic/saturn_moon_100.txt
+    height: 23
+  tags:
+  - cosmic
+  - saturn
+  - moon
+  - planet
+  - orbital
+- name: Starry Landscape
+  description: Landscape under starry sky
+  variants:
+  - width: 81
+    file: cosmic/starry_landscape_120.txt
+    height: 17
+  tags:
+  - cosmic
+  - stars
+  - landscape
+  - night
+  - celestial
